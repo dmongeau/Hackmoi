@@ -1,0 +1,39 @@
+/* CSS Document */
+
+body {
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+ul,li {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+#page {
+	width:960px;
+	margin:40px auto;
+}
+
+#header {
+	margin-bottom:30px;
+}
+
+#header h1 {
+	padding:0;
+	margin-bottom:5px;
+	font-size:70px;
+}
+
+#header ul li {
+	display:inline;
+}
+
+form.contest {
+	padding:0;
+	margin:20px 0 40px 0;	
+}
+
+form div.buttons {
+	margin-top:20px;	
+}
