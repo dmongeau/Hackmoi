@@ -63,7 +63,7 @@ if($_POST) {
             <div id="content">
                 <h2>Défi #2</h2>
                 
-                <form action="concours.php" method="post" class="contest">
+                <form action="concours2.php" method="post" class="contest">
                 
                     <p>Qui aimeriez-vous avoir comme premier ministre du Québec?</p>
                     
@@ -92,9 +92,9 @@ if($_POST) {
                         <label><input type="radio" name="answer" value="0" /> Aucune de ces réponses</label>
                     </div>
                     
-                    <div class="field">
-					<?=recaptcha_get_html('6LeTqMkSAAAAAJm-_K4XN2vk2T3edTxU6ceGiccR')?>
-                    </div>
+                    <div class="spacer-small"></div>
+                    
+                    <div class="field"><?=recaptcha_get_html('6LeTqMkSAAAAAJm-_K4XN2vk2T3edTxU6ceGiccR')?></div>
                     
                     <div class="buttons">
                     	<button type="submit" class="submit">Voter</button>
@@ -103,7 +103,7 @@ if($_POST) {
                 </form>
                 
                 <h4>Instructions</h4>
-                <p>Pour gagner, vous devez inscrire 10 000 votes pour une des réponses ci-dessus.<br/>
+                <p>Pour gagner, vous devez inscrire 5 000 votes pour une des réponses ci-dessus.<br/>
                 Pour vous identifier, ajoutez un champ nommé «hacker» à l'envoi du formulaire, qui contient un surnom de votre choix.</p>
                 
                 <form action="concours.php" method="post" class="contest">

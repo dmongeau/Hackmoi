@@ -45,10 +45,9 @@
                 <p>Pour gagner, vous devez inscrire 50 000 votes pour la réponse «Oui».<br/>
                 Pour vous identifier, ajoutez un champ nommé «hacker» à l'envoi du formulaire, qui contient un surnom de votre choix.</p>
                 
-                <h4>Les résultats</h4>
                 <form action="concours.php" method="post" class="contest">
-                	<p>Entrez votre surnom pour voir le nombre de votes que vous avez enregistrés:</p>
-                	<div class="field"><input type="text" name="username" /></div>
+                	<p>Pour voir vos votes, entrez votre surnom ci-dessous:</p>
+                	<div class="field"><input type="text" name="username" size="30" /> <button type="submit" class="submit">Voir les votes</button></div>
                 </form>
             </div>
     	</div>
