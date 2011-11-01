@@ -1,11 +1,20 @@
 <?php
 
 
+require_once('recaptchalib.php');
 
 
 if($_POST) {
 	
 	if($_POST['answer'] != '0' && $_POST['answer'] <= 0) {
+		header('Content-type: text/plain; charset="utf-8"');
+		echo 'erreur';
+		exit();
+	}
+	
+	$privateKey = '6LeTqMkSAAAAADnQSmaKhs62A6sgPAgR7gEAFwsW';
+	$resp = recaptcha_check_answer ($privatekey,$_SERVER["REMOTE_ADDR"],$_POST["recaptcha_challenge_field"],$_POST["recaptcha_response_field"]);
+	if (!$resp->is_valid) {
 		header('Content-type: text/plain; charset="utf-8"');
 		echo 'erreur';
 		exit();
@@ -81,6 +90,10 @@ if($_POST) {
                     </div>
                     <div class="field">
                         <label><input type="radio" name="answer" value="0" /> Aucune de ces réponses</label>
+                    </div>
+                    
+                    <div class="field">
+					<?=recaptcha_get_html('6LeTqMkSAAAAAJm-_K4XN2vk2T3edTxU6ceGiccR')?>
                     </div>
                     
                     <div class="buttons">
